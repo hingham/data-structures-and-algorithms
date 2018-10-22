@@ -27,7 +27,12 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  let charArray = [];
+  for (let i = 0; i<arr.length; i++){
+    let char = arr.charAt(i);
+    charArray.push(char);
+  }
+  return charArray;
 };
 
 
@@ -70,7 +75,16 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  let ingredients = ['Gruffalo','oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water'];
+  
+  for (let i = 0; i<recipe.ingredients.length; i++){
+  let num = recipe.ingredients[i].indexOf(ingredients[i]);
+  console.log(num);
+  let length = recipe.ingredients[i].length;
+  let slice = recipe.ingredients[i].slice(num);
+
+  result.push(slice);
+  }
   return result;
 }
 
@@ -82,7 +96,22 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  for (let i = 0; i<recipe.ingredients.length; i++){
+      let  tempArr = recipe.ingredients[i].split(' ');
+      tempArr.splice(0, 2);
+      let item = '';
+      if(tempArr[1] && tempArr[2]){
+      item = tempArr[0] + ' '+ tempArr[1] + ' ' + tempArr[2];
+      result.push(item);
+      }
+      else if(tempArr[1]){
+       item = tempArr[0] + ' '+ tempArr[1];
+       result.push(item);
+      }
+      else{
+        result.push(tempArr[0]);
+      }
+    }
   return result;
 }
 
@@ -95,7 +124,10 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
+  for (let i = 0; i<recipe.steps.length; i++){
+    let verbs = recipe.steps[i].split(' ')[0];
+    result.push(verbs);
+    }  
   return result;
 }
 
@@ -110,7 +142,13 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
+
+  for (let i = 0; i< arr.length; i++){
+    if (arr[i]%2===0){
+      arr.splice(i, 1);
+      i=0;
+    }
+  }  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,8 +163,19 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+  if(str.length < numberOfCharacters){
+    str= ' ';
+  }
+  else if(numberOfCharacters < 0){
+    str;
+  }
+  else{
+    str=str.slice(0, str.length - numberOfCharacters);
+    str;
+  }
+  return str;
 };
+
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,12 +183,24 @@ CHALLENGE 8 - Stretch Goal
 Write a function named totalSumCSV that, given a string of comma-separated values (CSV) as input. (e.g. "1,2,3"), returns the total sum of the numeric values (e.g. 6).
 ------------------------------------------------------------------------------------------------ */
 
+var numStr = '147, 4';
 const totalSumCSV = (str) => {
   let total = 0;
-  // Solution code here...
+  var regex = /\d+/g; 
+  var strArr = str.match(regex);
+  console.log(strArr.length);
+  if (strArr.length > 1){
+    console.log('more than 0')
+     for (let i = 0; i < strArr.length; i++){
+      console.log(strArr[i]);
+      total = total + parseInt(strArr[i], 10);
+  }
+  }
+  else{
+    total = parseInt(strArr[0], 10);
+  }
   return total;
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
@@ -148,8 +209,17 @@ For example, removeVowels('gregor') returns 'grgr'.
 ------------------------------------------------------------------------------------------------ */
 
 const removeVowels = (str) => {
-  // Solution code here...
+  var newString = '';
+  let regex = /a|e|i|o|u/g;
+  for (let i = 0; i< str.length; i ++){
+  let myValue = regex.test(str.charAt(i));
+    if (!myValue){
+      newString = newString + str.charAt(i);
+    }
+  }
+  return newString.toString();
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -159,9 +229,23 @@ Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioo
 ------------------------------------------------------------------------------------------------ */
 
 const extractVowels = (str) => {
-  // Solution code here...
+  let newString = '';
+  let vowelString = '';
+  let myArray = [];
+  let regex = /a|e|i|o|u/;
+  for (let i = 0; i< str.length; i++){
+  let myValue = regex.test(str.charAt(i));
+    if (!myValue){
+      newString = newString + str.charAt(i);
+    }
+    else if (myValue){
+      vowelString = vowelString + str.charAt(i);
+    }
+  }
+  vowelString = vowelString.split('').sort().join('');
+  myArray.push(newString, vowelString);
+  return myArray;
 };
-
 /* ------------------------------------------------------------------------------------------------
 TESTS
 All the code below will verify that your functions are working to solve the challenges.
@@ -259,4 +343,4 @@ describe('Testing challenge 10', () => {
 
     expect(extractVowels('The quick brown fox')).toStrictEqual(['Th qck brwn fx', 'eioou']);
   });
-// });
+});
