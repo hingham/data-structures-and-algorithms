@@ -57,10 +57,18 @@ If the user enters any of these four inputs, return true. For any other input, r
 Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
-const matchMonth = (input) => {
-    let monthRegex = /\b(Oct)|(October)|(oct)|(october)\b/g
-    return input;
+  const matchMonth = (input) => {
+    // let monthRegex = /[oO]ct(ober)?\b/g
+    let monthRegex = /^[oO]ct(ober)?\b/g;
+  
+    if(monthRegex.test(input)){
+      return true;
+      }
+    else{
+      return false;
+    }
   };
+  
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -69,9 +77,11 @@ For example, if given the string "Hello, and have a wonderful day!", the word "H
 The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "a ", "wonderful "].
 ------------------------------------------------------------------------------------------------ */
 
-const noPunctuation = str => {
-  // Solution code here...
-};
+  const noPunctuation = str => {
+    let regexPunc = /\w+\s/g;
+    return str.match(regexPunc);
+    };
+  
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -82,7 +92,8 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
-  // Solution code here...
+  var regex = /a|e|i|o|u/g;
+  return str.replace(regex, '_');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -95,8 +106,9 @@ Hint: All of these words end with the letters "ells".
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
 const findShells = (str) => {
-  // Solution code here...
-};
+  var regex = /[a-z]+(ells)+/g;
+  return str.match(regex);
+  };
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
