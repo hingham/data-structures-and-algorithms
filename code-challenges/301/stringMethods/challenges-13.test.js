@@ -120,9 +120,7 @@ const unenrollBrook = (arr) => {
   return arr.map((val,idx)=>{
     console.log(val);
     return val.filter((names, idx)=>{
-      if (!names.includes("Brook")){
-        return names;
-      }      
+      return !names.includes("Brook");
     })
   })
 };
@@ -150,18 +148,17 @@ For example, ['Tuesday', 'Monday', 'Wednesday and Thursday', 'Tuesday 2', 'Thurs
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 const sortByDay = (arr) => {
-  var newArr = [];
+  var allEventArr = [];
     daysOfWeek.forEach((day,idx)=>{
       let dayArr = [];
-      newArr.push(dayArr);
       arr.forEach((event)=>{
-        console.log(day);
         if(event.includes(day)){
           dayArr.push(event);
         }
       })
+      allEventArr.push(dayArr);
     })
-   return newArr;
+   return allEventArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -173,9 +170,10 @@ For example, ['abcd', 'efgh', 'ijkl', 'mnop'] returns ['a', 'f', 'k', 'p']
 ------------------------------------------------------------------------------------------------ */
 
 const characterByIndex = (arr) => {
-  // Solution code here...
-};
-
+  return arr.map((str, idx)=>{
+    return str.charAt(idx);
+  });
+}
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
