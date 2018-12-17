@@ -9,4 +9,4 @@
 
 ##Solution 
 
-!![image](/assets/array_reduce.jpg);
+![image](assets/array_reduce.jpg);
