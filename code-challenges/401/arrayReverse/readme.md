@@ -9,4 +9,4 @@
 
 ##Solution 
 
-![image](assets/array_reverse.jpg);
+![image](assets/array_reverse.JPG)
