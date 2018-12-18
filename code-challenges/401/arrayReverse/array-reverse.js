@@ -15,15 +15,15 @@ function reverseArray(inArray){
 };
 
 
-//Stretch goal start
+//Stretch goal: change array in place
 
-// function reverseArrayTwo(inArray){
-//     counter = 0;
+function reverseArrayTwo(inArray){
+    counter = 0;
 
-//     for(let i = inArray.length-1; i >=0; i -- ){
-//         let temp = inArray[i];
-//         inArray[i]= inArray[counter];
-//         inArray[counter] = temp;
-//         counter ++;
-//     }
-// }
+    for(let i = inArray.length-1; i >=0; i -- ){
+        let temp = inArray[i];
+        inArray[i]= inArray[counter];
+        inArray[counter] = temp;
+        counter ++;
+    }
+}
