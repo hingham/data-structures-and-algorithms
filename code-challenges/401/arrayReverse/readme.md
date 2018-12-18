@@ -9,4 +9,8 @@
 
 ##Solution 
 
+<<<<<<< HEAD
+!![image](assets/array_reduce.jpg);
+=======
 ![image](assets/array_reverse.JPG)
+>>>>>>> 06bb9a7994e6415ebaf43cb1d95d90350ec3f576
