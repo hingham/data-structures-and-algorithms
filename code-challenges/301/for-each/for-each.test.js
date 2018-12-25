@@ -46,7 +46,6 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 const removeOne = (num, arr) => {
     let remainder = num % 3;
-    console.log(remainder);
     if (remainder=== 2 ){
         arr.pop();
     }
