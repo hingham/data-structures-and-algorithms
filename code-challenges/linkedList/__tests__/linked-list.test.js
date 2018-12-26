@@ -1,8 +1,6 @@
 'use strict';
+
 const lists = require('../linked-list.js');
-
-
-////reference lab 02 to find how to export a class
 
 
 describe('linked', () =>{
