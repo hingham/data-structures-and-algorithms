@@ -61,7 +61,6 @@ describe('linked', () =>{
   
 
     //includes returns true if the value is included
-
     it('returns true if value is included', () =>{
       let result = new lists.Linkedlist();
       result.insert('Hannah');
