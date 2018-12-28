@@ -90,6 +90,32 @@ class Linkedlist {
     previous.next = node;
   }
 
+  getValue(k){
+
+    if(!k){
+      return null;
+    }
+
+    let current= this.head;
+    let cnt = 0;
+    while(current.next){
+      current = current.next;
+      cnt++;
+    }
+
+    let target = cnt - k;
+    if(target < 0){ return false; }
+
+    cnt = 0;
+    current = this.head;
+
+    while(cnt < target){
+      current = current.next;
+      cnt ++;
+    }
+    return current.next.value;
+  }
+
 }
 
 
@@ -99,7 +125,8 @@ list.append('Hannah');
 list.append('emi');
 list.append('jessie');
 list.insertAfter('Hannah', '28');
-// list.insertBefore('lisa', 'sam');
+
+list.getValue( 10);
 console.log(util.inspect(list,{depth:10}));
 
 

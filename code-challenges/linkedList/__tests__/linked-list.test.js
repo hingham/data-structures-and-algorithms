@@ -48,7 +48,6 @@ describe('linked', () =>{
       let twoAdded = new lists.Linkedlist();
       twoAdded.append('Hannah');
       twoAdded.append();
-
       expect(oneAdded).toEqual(twoAdded);
     });
 
@@ -58,7 +57,6 @@ describe('linked', () =>{
       result.append('Jessie');
       expect(result.head.next.next).toEqual(null);
     });
-  
 
     //includes returns true if the value is included
     it('returns true if value is included', () =>{
@@ -82,10 +80,7 @@ describe('linked', () =>{
       let result = new lists.Linkedlist();
       let included = result.includes('Jessie');
       expect(included).toEqual(false);
-
     });
-
-
 
     it('inserts something after', () =>{
       let result = new lists.Linkedlist();
@@ -94,7 +89,6 @@ describe('linked', () =>{
       result.append('Jessie');
       result.insertAfter('Hannah', '28');
       expect(result.head.next.value).toEqual('28');
-
     });
 
     it('inserts something before', () =>{
@@ -104,7 +98,33 @@ describe('linked', () =>{
       result.append('Jessie');
       result.insertBefore('Emi', '28');
       expect(result.head.next.value).toEqual('28');
+    });
 
+    it('getvalue gets the value kth of the end', () =>{
+      let result = new lists.Linkedlist();
+      result.append('Hannah');
+      result.append('Emi');
+      result.append('Jessie');
+      let value = result.getValue(2);
+      expect(value).toEqual('Emi');
+    });
+
+    it('expect it to return null if no value specified', () =>{
+      let result = new lists.Linkedlist();
+      result.append('Hannah');
+      result.append('Emi');
+      result.append('Jessie');
+      let value = result.getValue();
+      expect(value).toBeNull();
+    });
+
+    it('expect it to return null if value greater than the length', () =>{
+      let result = new lists.Linkedlist();
+      result.append('Hannah');
+      result.append('Emi');
+      result.append('Jessie');
+      let value = result.getValue(5);
+      expect(value).toBe(false);
     });
 
   });
