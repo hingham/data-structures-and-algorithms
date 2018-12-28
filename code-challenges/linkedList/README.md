@@ -34,7 +34,7 @@ Correcly prints out all the values of the linked list as an array.
 [![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
 ![image](assets/linked-list-img-3.JPG)
 ![image](assets/linked-list-img-2.JPG)
-![image](assets/lined-list-img-1.JPG)
+![image](assets/linked-list-img-1.JPG)
 
 
 
