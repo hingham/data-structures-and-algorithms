@@ -9,9 +9,21 @@ class Node {
   }
 }
 
+
+
 class Linkedlist {
   constructor(){
     this.head = null;
+  }
+
+  insert(value){
+    let node = new Node (value);
+    let temp;
+    if(this.head){
+      temp = this.head;
+    }
+    this.head = node;
+    this.head.next = temp;
   }
 
   append(value){  //if head is not assigned, assign head the value and a next value
@@ -63,13 +75,10 @@ class Linkedlist {
 
   insertAfter(value, newValue){
     let node = new Node(newValue);
-    // console.log(this.head);
     let current = this.head;
-    // let currentNext = this.head.next;
 
     while(current.value!== value) {
       current = current.next;
-
     }
 
     node.next = current.next;
@@ -97,7 +106,7 @@ let list = new Linkedlist();
 
 list.append('Hannah');
 list.append('emi');
-list.append('jessie');
+list.insert('jessie');
 list.insertAfter('Hannah', '28');
 // list.insertBefore('lisa', 'sam');
 console.log(util.inspect(list,{depth:10}));
