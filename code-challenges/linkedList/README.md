@@ -23,6 +23,19 @@ Inserts new node that has a vale and a next property. New nodes will be inserted
 Search through all values when includes propety is called to determine if there is a value included in the node list and returns the correct boolean value.
 Correcly prints out all the values of the linked list as an array. 
 
+
+##Day 2: 
+
+## Challenge: Write the following methods for the Linked List class: Append(value) which adds a new node with the given value to the end of the list. Write a function insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node. Write a function insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node.
+
+## Description: Write three new methods to do complete the challenge specified above.
+
+
 [![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
+![image](assets/linked-list-img-3.JPG)
+![image](assets/linked-list-img-2.JPG)
+![image](assets/lined-list-img-1.JPG)
+
+
 
 
