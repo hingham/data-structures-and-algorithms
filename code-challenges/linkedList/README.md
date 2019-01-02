@@ -50,7 +50,8 @@ Correcly prints out all the values of the linked list as an array.
 
 ##Description: Write the funciton in a new file. Write three tests that check the function. Before you type up the function, write your solution on a whiteboard. You may use methods from the class that you have written.
 
-[![Build Status](  )](      )
+
+[![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
 ![image](assets/merge-wb.JPG)
 
 
