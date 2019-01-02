@@ -27,10 +27,7 @@ class Linkedlist {
         current = current.next;
       }
       current.next = node;
-
-
     }
-   
   }
 
   //Check if a specific value is included in the node list
@@ -56,7 +53,6 @@ class Linkedlist {
       valArr.push(currentVal.value);
       currentVal = currentVal.next;
     }
-
     console.log('all values ', valArr);
     return valArr;
   }
@@ -133,7 +129,6 @@ class Linkedlist {
     }
     current.next = node;
   }
-
 
 }
 
