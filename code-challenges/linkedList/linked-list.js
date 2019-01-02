@@ -116,18 +116,37 @@ class Linkedlist {
     return current.next.value;
   }
 
+  insert(value){
+    let node = new Node(value);
+    if(!value){
+      return null;
+    }
+
+    if(!this.head){
+      this.head = node;
+      return;
+    }
+
+    let current = this.head;
+    while(current.next){
+      current = current.next;
+    }
+    current.next = node;
+  }
+
+
 }
 
 
-let list = new Linkedlist();
+// let list = new Linkedlist();
 
-list.append('Hannah');
-list.append('emi');
-list.append('jessie');
-list.insertAfter('Hannah', '28');
+// list.append('Hannah');
+// list.append('emi');
+// list.append('jessie');
+// list.insertAfter('Hannah', '28');
 
-list.getValue( 10);
-console.log(util.inspect(list,{depth:10}));
+// list.getValue( 10);
+// console.log(util.inspect(list,{depth:10}));
 
 
 module.exports = { Linkedlist };
