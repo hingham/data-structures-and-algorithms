@@ -143,7 +143,7 @@ list.insert('28');
 list.getValue( 10);
 console.log(util.inspect(list,{depth:10}));
 
-module.exports = { Linkedlist };
+module.exports = {Linkedlist};
 
 function reverse(list){
   let prev = list.head;
