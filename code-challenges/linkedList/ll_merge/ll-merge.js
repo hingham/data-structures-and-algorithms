@@ -24,14 +24,7 @@ function mergedList(l1, l2){
   console.log(curList1, curList2);
   
   while(curList1.next && curList2.next){
-    if(!curList1.next){
-      curList1 = curList2.next;
-      curList2 = curList2.next;
-    }
-    if(!curList2.next){
-      curList1 = curList1.next;
-    }
-
+  
     let temp = curList2.next;
 
     curList2.next = curList1.next;
@@ -40,10 +33,15 @@ function mergedList(l1, l2){
     curList1 = curList2.next;
     curList2 = temp;
 
-    console.log('current list 1 ', l1.head);
-
   }
 
+  // if(curList2.next){
+  //   curList2.next = curList1;
+  // }
+
+  if(curList1.next){
+    curList1.next = curList1; 
+  }
 
   curList1.next = curList2;
   // console.log('final list' , l1.head);

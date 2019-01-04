@@ -27,10 +27,7 @@ class Linkedlist {
         current = current.next;
       }
       current.next = node;
-
-
     }
-   
   }
 
   //Check if a specific value is included in the node list
@@ -56,7 +53,6 @@ class Linkedlist {
       valArr.push(currentVal.value);
       currentVal = currentVal.next;
     }
-
     console.log('all values ', valArr);
     return valArr;
   }
@@ -137,19 +133,36 @@ class Linkedlist {
 
 }
 
+let list = new Linkedlist();
 
-// let list = new Linkedlist();
+list.insert('Hannah');
+list.insert('emi');
+list.insert('jessie');
+list.insert('28');
 
-// list.append('Hannah');
-// list.append('emi');
-// list.append('jessie');
-// list.insertAfter('Hannah', '28');
-
-// list.getValue( 10);
-// console.log(util.inspect(list,{depth:10}));
-
+list.getValue( 10);
+console.log(util.inspect(list,{depth:10}));
 
 module.exports = { Linkedlist };
 
+function reverse(list){
+  let prev = list.head;
+  let cur = prev.next;
+  let next = null; 
+  prev.next = null;
+
+  if(!list.head){
+    return false;
+  }
+
+  while(cur !== null){
+    next = cur.next; //this becomes null on the last round
+    cur.next = prev; //2nd node points to 1st
+    prev = cur; //prev becomes the cur
+    cur = next;
+  }
+  list.head = prev;
+  return list;
+}
 
 
