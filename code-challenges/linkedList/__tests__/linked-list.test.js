@@ -1,7 +1,7 @@
 'use strict';
 
 const lists = require('../linked-list.js');
-
+const merge = require('../ll_merge/ll-merge.js');
 
 describe('linked', () =>{
 
@@ -127,6 +127,57 @@ describe('linked', () =>{
       expect(value).toBe(false);
     });
 
+  });
+
+  describe('merged list', () =>{
+    it('expect it to return a new linkedlist object', () =>{
+      let list = new lists.Linkedlist();
+      let list2 = new lists.Linkedlist();
+
+      list.insert('a');
+      list.insert('b');
+      list.insert('c');
+
+
+      list2. insert('1');
+      list2.insert('2');
+      list2.insert('3');
+
+      let result = merge.mergedList(list, list2);
+      result = typeof(result);
+      expect(result).toEqual('object');
+    
+
+    });
+    it('expect it to alternate the values', () =>{
+      let list = new lists.Linkedlist();
+      let list2 = new lists.Linkedlist();
+
+      list.insert('a');
+      list.insert('b');
+      list.insert('c');
+
+
+      list2. insert('1');
+      list2.insert('2');
+      list2.insert('3');
+
+      let result = merge.mergedList(list, list2);
+      result = result.print();
+      expect(result).toEqual(['a', '1', 'b', '2', 'c', '3']);
+    });
+
+    it('expect it to return the origin list if only one list applied', () =>{
+      let list = new lists.Linkedlist();
+      list.insert('a');
+      list.insert('b');
+      list.insert('c');
+
+      let result = merge.mergedList(list);
+
+      expect(result).toEqual(list);
+
+    });
   });
 
 });
