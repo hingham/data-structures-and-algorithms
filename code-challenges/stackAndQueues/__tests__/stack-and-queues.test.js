@@ -17,7 +17,7 @@ describe('stacks', () =>{
       myStack.push('emi');
       expect(myStack['top']['next']['value']).toEqual('hannah');
     }); 
-    it('will return the origin node if no value is provided', () =>{
+    it('will return the original node if no value is provided', () =>{
       let myStack = new sq.Stack();
       myStack.push('hannah');
       myStack.push('emi');

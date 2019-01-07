@@ -130,10 +130,6 @@ class Linkedlist {
     current.next = node;
   }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 9d9cf16443ec3983bee78c3c9a94aefe6715f097
 }
 
 let list = new Linkedlist();
@@ -167,5 +163,7 @@ function reverse(list){
   list.head = prev;
   return list;
 }
+
+
 
 
