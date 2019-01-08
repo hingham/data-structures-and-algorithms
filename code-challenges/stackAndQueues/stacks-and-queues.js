@@ -32,13 +32,6 @@ class Stack {
   }
 }
 
-let myStack = new Stack();
-console.log(myStack);
-myStack.push(5);
-console.log('my node ', myStack.push(8));
-console.log('my top ', myStack);
-console.log('my pop ', myStack.pop());
-console.log('my stack did change ', myStack );
 
 
 class Queue {
@@ -89,4 +82,4 @@ class Queue {
 // console.log('my peek ', myQ.peek());
 // console.log('my stack did not change ', myQ );
 
-module.exports = {Stack, Queue};
+module.exports = {Stack, Queue, Node};
