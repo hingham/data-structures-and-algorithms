@@ -51,7 +51,7 @@ Assertions:
 ### Challenge: Write the class. Use the first in first out principal to take the elements out of the class. When you dequeue, dequeue the first of the animals requested and remove the animal from the list. 
 
 ![image](assets/animal-shelfter-wb.JPG);
-[![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
+
 
 
 
