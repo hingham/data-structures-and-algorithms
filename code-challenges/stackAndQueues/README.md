@@ -44,6 +44,17 @@ Assertions:
 [![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
 
 
+##Day 3: Fifo Animals Shelfter with FIFO:
+
+### Description: Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.Implement the following methods: enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object. dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
+
+### Challenge: Write the class. Use the first in first out principal to take the elements out of the class. When you dequeue, dequeue the first of the animals requested and remove the animal from the list. 
+
+![image](assets/animal-shelfter-wb.JPG);
+[![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
+
+
+
 
 
 
