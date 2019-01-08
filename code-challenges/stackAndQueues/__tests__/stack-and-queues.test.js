@@ -1,6 +1,7 @@
 'use strict';
 
 let sq = require('../stacks-and-queues.js');
+let pseudoSq = require('../queueWithStack/queue-with-stacks.js');
 
 describe('stacks', () =>{
   describe('push', () =>{
@@ -168,6 +169,44 @@ describe('Queues', () =>{
       Q.peek();
         
       expect(myQ).toEqual(Q);  
+    });
+  });
+});
+
+describe('pseudo queue', () =>{
+  describe('pseudo dequeue', () =>{
+    it('returns the first node when dequeued', () =>{
+      let myQ = new pseudoSq.QueueWithStacks();
+      myQ.enqueue('han');
+      myQ.enqueue('leo');
+      myQ.enqueue('jess');
+      let result = myQ.pop();
+      expect(result.value).toEqual('jess');
+    });
+    it('changes the front value of the queue to the next value', ()=> {
+      let myQ = new pseudoSq.QueueWithStacks();
+      myQ.enqueue('han');
+      myQ.enqueue('leo');
+      myQ.enqueue('jess');
+      myQ.pop();
+      expect(myQ.front.value).toEqual('leo');
+    });
+  });
+
+  describe('pseudo enqueue', () =>{
+    it('does not change the front of the queueu', () =>{
+      let myQ = new pseudoSq.QueueWithStacks();
+      myQ.enqueue('han');
+      myQ.enqueue('leo');
+      myQ.enqueue('jess');
+      expect(myQ.top.value).toEqual('han');
+    });
+    it('sets the rear to be the new node added', ()=> {
+      let myQ = new pseudoSq.QueueWithStacks();
+      myQ.enqueue('han');
+      myQ.enqueue('leo');
+      myQ.enqueue('jess');
+      expect(myQ.rear).toEqual('jess');
     });
   });
 });
