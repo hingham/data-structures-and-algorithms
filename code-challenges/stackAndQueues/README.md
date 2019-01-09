@@ -66,6 +66,10 @@ Curly Brackets : {}
 
 ![image](assets/wb-multi-bracket.JPG);
 
+[![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
+
+travis link: https://www.travis-ci.com/
+
 
 
 
