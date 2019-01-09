@@ -52,7 +52,19 @@ Assertions:
 
 ![image](assets/animal-shelfter-wb.JPG);
 
+##Day 4: 
 
+###Description: On your main file, create…
+Your function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets:
+
+Round Brackets : ()
+Square Brackets : []
+Curly Brackets : {}
+
+###Challenge: Write the function that takes in any string. Have the string check the validity of the statement. Notably, make sure that all the brackets are balanced and self closing. If there is an error, then return false.
+
+
+![image](assets/wb-multi-bracket.JPG);
 
 
 
