@@ -30,6 +30,8 @@ Correcly prints out all the values of the linked list as an array.
 
 [![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
 
+Travis Link: https://www.travis-ci.com/hingham/data-structures-and-algorithms
+
 
 ##Day 2: 
 
