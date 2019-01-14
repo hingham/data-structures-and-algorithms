@@ -47,6 +47,10 @@ For explicitly-typed languages: Ensure your node values are of type Object, to h
 #Description: Traverse the linked list. Check at each node if it is divisible by 3, 5, or both. If it is, change the value of the node before moving to the next node. 
 
 ![image](./assets/fizz-buzz-wb.JPG)
+[![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)]
+
+(https://www.travis-ci.com/hingham/data-structures-and-algorithms)
+https://www.travis-ci.com/hingham/data-structures-and-algorithms
 
 
 ##Day 3: 
