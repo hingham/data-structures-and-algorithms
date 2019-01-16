@@ -58,6 +58,7 @@ https://www.travis-ci.com/hingham/data-structures-and-algorithms
 #Description: Traverse the binary tree, moving across each level of the nodes. Use a queue to move through all the nodes. Print the nodes in the order that they were visited as an array. 
 
 ![image](./assets/breadth-wb.jpg)
+[![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
 
 ##Day 4:
 
