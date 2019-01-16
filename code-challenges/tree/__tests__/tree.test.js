@@ -125,9 +125,9 @@ describe('binary search tree', () =>{
     b.left = d;
     b.right = e;
     breadthTree.root = a;
-    let result = Tree.breadthFirst(breadthTree);
+    let result = breadthTree.breadthFirst();
     let testTree2 = new Tree.BinaryTree();
-    let empty = Tree.breadthFirst(testTree2);
+    let empty = testTree2.breadthFirst();
 
     it('prints null if no nodes are in array', ()=>{
       // let result = Tree.breadthFirst(new Tree.BinaryTree());
@@ -140,6 +140,41 @@ describe('binary search tree', () =>{
       let order = breadthTree.inOrder();
       let sorted = result.sort();
       expect([2, 3, 4, 5, 8, 10]).toEqual(order);
+    });
+  });
+
+
+  describe('max value search', ()=>{
+
+    let maxTree = new Tree.BinaryTree();
+    let a = new Tree.Node(5);
+    let b = new Tree.Node(3);
+    let c = new Tree.Node(10);
+    let d = new Tree.Node(2);
+    let e = new Tree.Node(4);
+    let f = new Tree.Node(8);
+
+
+    a.left = b;
+    a.right = c;
+    c.left = f;
+    b.left = d;
+    b.right = e;
+    maxTree.root = a;
+    let result = maxTree.maxVal();
+    let testTree2 = new Tree.BinaryTree();
+    let empty = testTree2.maxVal();
+
+    it('prints null if no nodes are in array', ()=>{
+      // let result = Tree.breadthFirst(new Tree.BinaryTree());
+      expect(empty).toBe(null);
+    });
+    it('it returns the largest element in the tree', ()=>{
+      expect(result).toEqual(10);
+    });
+    it('it does not mutate the original tree', ()=>{
+      
+      expect(maxTree.inOrder()).toEqual([2, 3, 4, 5, 8, 10]);
     });
   });
 

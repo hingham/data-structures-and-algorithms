@@ -71,6 +71,46 @@ class BinaryTree{
     // console.log(nodes);
     return nodes;
   }
+
+  breadthFirst (){
+    if(!this.root){
+      return null;
+    }
+    let q1= [];
+    let q2 = [];
+    let val;
+    q1.unshift(this.root);
+    while(q1.length){
+      val = q1.pop();
+      if(val.left){
+        q1.unshift(val.left);
+      }
+      if(val.right){
+        q1.unshift(val.right);
+      }
+      q2.push(val.value);
+    }
+    return q2;
+  }
+
+  maxVal(){
+    if(!this.root){return null;}
+    let q = [];
+    let max = 0;
+    let val;
+
+    q.push(this.root);
+    while(q.length){
+      val = q.shift();
+      if(val.left){q.push(val.left);}
+      if(val.right){q.push(val.right);}
+      if(val.value > max){
+        max = val.value;
+      }
+    }
+    return max;
+  }
+
 }
 
 
@@ -123,26 +163,6 @@ class BinarySearchTree extends BinaryTree {
 }
 
 
-//stretch goal:
-class kNode{
-  constructor(value){
-    this.value = value;
-    this.children = [];
-  }
-}
-
-class KaryTree {
-  constructor(){
-    this.root = null;
-  }
-  addChild(val){    
-    let node = new Node(val);
-    this.root.children.push(node);
-  }
-
-}
-
-
 let tree = new BinaryTree();
 let a = new Node(5);
 let b = new Node(3);
@@ -165,32 +185,9 @@ h.right = i;
 tree.root = a;
 
 
-function breadthFirst (tree){
-  if(!tree.root){
-    return null;
-  }
 
-  let q1= [];
-  let q2 = [];
-  let val;
-  q1.unshift(tree.root);
-  console.log(q1);
-  while(q1.length){
-    val = q1.pop();
-    if(val.left){
-      q1.unshift(val.left);
-    }
-    if(val.right){
-      q1.unshift(val.right);
-    }
-    q2.push(val.value);
-  }
-  return q2;
-}
-
-
-breadthFirst(tree);
+console.log(tree.breadthFirst() );
 
 // tree.postOrder();
 
-module.exports= {Node, BinaryTree, BinarySearchTree, breadthFirst};
+module.exports= {Node, BinaryTree, BinarySearchTree};

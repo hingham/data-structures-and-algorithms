@@ -60,7 +60,10 @@ https://www.travis-ci.com/hingham/data-structures-and-algorithms
 ![image](./assets/breadth-wb.jpg)
 [![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
 
-##Day 4:
+##Day 4:Write a function called find-maximum-value which takes binary tree as its only input. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+![image](./assets/max-value-wb.jpg)
+
 
 
 
