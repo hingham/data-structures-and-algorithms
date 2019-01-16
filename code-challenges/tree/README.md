@@ -62,7 +62,7 @@ https://www.travis-ci.com/hingham/data-structures-and-algorithms
 
 #Description: Write a method that find the maximum value of a binary tree. I called my method maxVal. The method uses a q approach to find the maxVal. The approach dequeues the first value in the array, adds the left and right values to the array (if they exist) and then compares the value to the max to determine if the value should be the new max. This process continues until there is nothing left in the array. 
 
-![image](./assets/max-value-wb.jpg)
+![image](./assets/find-max-val.jpg)
 
 
 
