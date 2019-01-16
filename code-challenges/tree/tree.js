@@ -92,6 +92,25 @@ class BinaryTree{
     }
     return q2;
   }
+
+  maxVal(){
+    if(!this.root){return null;}
+    let q = [];
+    let max = 0;
+    let val;
+
+    q.push(this.root);
+    while(q.length){
+      val = q.shift();
+      if(val.left){q.push(val.left);}
+      if(val.right){q.push(val.right);}
+      if(val.value > max){
+        max = val.value;
+      }
+    }
+    return max;
+  }
+
 }
 
 
@@ -141,26 +160,6 @@ class BinarySearchTree extends BinaryTree {
     _walk(this.root);
     return bool;
   }
-}
-
-
-//stretch goal:
-class kNode{
-  constructor(value){
-    this.value = value;
-    this.children = [];
-  }
-}
-
-class KaryTree {
-  constructor(){
-    this.root = null;
-  }
-  addChild(val){    
-    let node = new Node(val);
-    this.root.children.push(node);
-  }
-
 }
 
 
