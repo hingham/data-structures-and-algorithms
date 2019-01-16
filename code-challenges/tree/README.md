@@ -53,7 +53,7 @@ For explicitly-typed languages: Ensure your node values are of type Object, to h
 ##Day 4:Write a function called find-maximum-value which takes binary tree as its only input. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
 
 
-# Description: Write a method that find the maximum value of a binary tree. I called my method maxVal. The method uses a q approach to find the maxVal. The approach dequeues the first value in the array, adds the left and right values to the array (if they exist) and then compares the value to the max to determine if the value should be the new max. This process continues until there is nothing left in the array. 
+#Description: Write a method that find the maximum value of a binary tree. I called my method maxVal. The method uses a q approach to find the maxVal. The approach dequeues the first value in the array, adds the left and right values to the array (if they exist) and then compares the value to the max to determine if the value should be the new max. This process continues until there is nothing left in the array. 
 
 ![image](./assets/max-value-wb.jpg)
 
