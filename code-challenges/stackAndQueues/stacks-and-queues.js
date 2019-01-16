@@ -51,7 +51,7 @@ class Queue {
   }
 
   dequeue() {
-    let first = {...this.front};
+    let first = this.front;
     first.next = null;
     this.front = this.front.next;
     return first;
