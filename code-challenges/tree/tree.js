@@ -71,6 +71,27 @@ class BinaryTree{
     // console.log(nodes);
     return nodes;
   }
+
+  breadthFirst (){
+    if(!this.root){
+      return null;
+    }
+    let q1= [];
+    let q2 = [];
+    let val;
+    q1.unshift(this.root);
+    while(q1.length){
+      val = q1.pop();
+      if(val.left){
+        q1.unshift(val.left);
+      }
+      if(val.right){
+        q1.unshift(val.right);
+      }
+      q2.push(val.value);
+    }
+    return q2;
+  }
 }
 
 
@@ -165,32 +186,9 @@ h.right = i;
 tree.root = a;
 
 
-function breadthFirst (tree){
-  if(!tree.root){
-    return null;
-  }
 
-  let q1= [];
-  let q2 = [];
-  let val;
-  q1.unshift(tree.root);
-  console.log(q1);
-  while(q1.length){
-    val = q1.pop();
-    if(val.left){
-      q1.unshift(val.left);
-    }
-    if(val.right){
-      q1.unshift(val.right);
-    }
-    q2.push(val.value);
-  }
-  return q2;
-}
-
-
-breadthFirst(tree);
+console.log(tree.breadthFirst() );
 
 // tree.postOrder();
 
-module.exports= {Node, BinaryTree, BinarySearchTree, breadthFirst};
+module.exports= {Node, BinaryTree, BinarySearchTree};
