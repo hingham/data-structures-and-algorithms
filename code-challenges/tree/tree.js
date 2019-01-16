@@ -1,5 +1,7 @@
 'use strict';
 
+let q = require('../stackAndQueues/stacks-and-queues.js');
+
 class Node{
   constructor(value){
     this.value = value;
@@ -66,7 +68,7 @@ class BinaryTree{
       nodes.push(node.value);
     };
     _walk(this.root);
-    console.log(nodes);
+    // console.log(nodes);
     return nodes;
   }
 }
@@ -141,7 +143,7 @@ class KaryTree {
 }
 
 
-let tree = new BinarySearchTree();
+let tree = new BinaryTree();
 let a = new Node(5);
 let b = new Node(3);
 let c = new Node(10);
@@ -163,15 +165,32 @@ h.right = i;
 tree.root = a;
 
 
-// tree.preOrder();
-tree.add(1);
-tree.add(10);
+function breadthFirst (tree){
+  if(!tree.root){
+    return null;
+  }
 
-tree.inOrder();
+  let q1= [];
+  let q2 = [];
+  let val;
+  q1.unshift(tree.root);
+  console.log(q1);
+  while(q1.length){
+    val = q1.pop();
+    if(val.left){
+      q1.unshift(val.left);
+    }
+    if(val.right){
+      q1.unshift(val.right);
+    }
+    q2.push(val.value);
+  }
+  return q2;
+}
 
-console.log(tree.contains(10) );
 
+breadthFirst(tree);
 
 // tree.postOrder();
 
-module.exports= {Node, BinaryTree, BinarySearchTree};
+module.exports= {Node, BinaryTree, BinarySearchTree, breadthFirst};

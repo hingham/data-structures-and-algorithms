@@ -17,7 +17,6 @@ c.left = f;
 b.left = d;
 b.right = e;
 testTree.root = a;
-
 describe('binary tree', () =>{
 
   describe('pre order', ()=>{
@@ -77,7 +76,7 @@ describe('binary search tree', () =>{
     it('it adds a node to the array', ()=>{
       let length = testSearchTree.inOrder().length;
       testSearchTree.add(7);
-
+      
       let result = testSearchTree.inOrder();
       expect(result.length).toEqual(length + 1);
     });
@@ -106,6 +105,41 @@ describe('binary search tree', () =>{
       let original = testSearchTree;
       testSearchTree.contains(11);
       expect(original).toEqual(testSearchTree);
+    });
+  });
+
+  describe('breadth search', ()=>{
+
+    let breadthTree = new Tree.BinaryTree();
+    let a = new Tree.Node(5);
+    let b = new Tree.Node(3);
+    let c = new Tree.Node(10);
+    let d = new Tree.Node(2);
+    let e = new Tree.Node(4);
+    let f = new Tree.Node(8);
+
+
+    a.left = b;
+    a.right = c;
+    c.left = f;
+    b.left = d;
+    b.right = e;
+    breadthTree.root = a;
+    let result = Tree.breadthFirst(breadthTree);
+    let testTree2 = new Tree.BinaryTree();
+    let empty = Tree.breadthFirst(testTree2);
+
+    it('prints null if no nodes are in array', ()=>{
+      // let result = Tree.breadthFirst(new Tree.BinaryTree());
+      expect(empty).toBe(null);
+    });
+    it('prints elements top down', ()=>{
+      expect(result).toEqual( [5, 3, 10, 2, 4, 8]);
+    });
+    it('prints the same elements asinorder', ()=>{
+      let order = breadthTree.inOrder();
+      let sorted = result.sort();
+      expect([2, 3, 4, 5, 8, 10]).toEqual(order);
     });
   });
 
