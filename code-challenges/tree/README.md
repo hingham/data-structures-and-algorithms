@@ -47,9 +47,11 @@ For explicitly-typed languages: Ensure your node values are of type Object, to h
 ![image](./assets/fizz-buzz-wb.JPG)
 
 
-##Day 3: 
+##Day 3: Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach; print every visited node’s value.
 
+#Description: Traverse the binary tree, moving across each level of the nodes. Use a queue to move through all the nodes. Print the nodes in the order that they were visited as an array. 
 
+![image](./assets/breadth-wb.jpg)
 
 ##Day 4:
 
