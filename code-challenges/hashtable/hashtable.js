@@ -10,11 +10,9 @@ class Hashtable {
   //turn something into a hash number
   hash(key) {
     let keyArr =  key.split('');
-
     let numbers = keyArr.reduce( (acc, val, idx)=>{
       return acc += val.charCodeAt(0);
     }, 0);
-
     return Math.floor((numbers % 19) * this.size / 19);
   }
 
@@ -23,6 +21,7 @@ class Hashtable {
     if(! this.table[hash]) {this.table[hash] = new ll.Linkedlist();}
     this.table[hash].insert({[key]: value}); 
   }
+
   // A method/function named Find that takes in the key and returns the value from key/value pair.
   find(key){
     let hash = this.hash(key);
@@ -35,8 +34,9 @@ class Hashtable {
   }
 
   search(linkList, key){
-    let item = {};
+    let item = null;
     const searchList = (node)=>{
+      //base case
       if(node === null){return;}
       if(Object.keys(node.value)[0] === key){ return item = node.value;}
       searchList(node.next);
@@ -47,12 +47,16 @@ class Hashtable {
 
   contains(key){
     let hash = this.hash(key);
+    let bool = false;
     if(this.table[hash]){
       this.search(this.table[hash], key);
       let keyObj = this.search(this.table[hash], key);
-      if(keyObj){return true;}
+      if(keyObj){
+        console.log(keyObj);
+        return bool = true;
+      }
     }
-    return false;
+    return bool;
   }
 
   // A method/function named GetHash that takes in a key and returns the index in the array the key is stored.
@@ -66,7 +70,6 @@ class Hashtable {
 let myHash = new Hashtable(4);
 
 myHash.hash('hannah');
-
 myHash.add('hannah', 28);
 myHash.add('nick', 22);
 myHash.add('jess', 30);
