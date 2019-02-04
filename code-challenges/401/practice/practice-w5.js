@@ -5,41 +5,40 @@ const sq = require('../../stackAndQueues/stacks-and-queues.js');
 
 let myList = new ll.Linkedlist();
 
-myList.append(1);
-myList.append(2);
+myList.append(9);
+myList.append(9);
 myList.append(9);
 
 
 console.log(`myList ${myList}`);
 ///printing the linked list and solving the barometer problem
-myList.print();
+// myList.print();
 function printList(list){
-  if (list.head){
-    console.log('has a head');
-    let current = list.head;
-    let previous = null;
-    while(current){
-      current.prev = previous;
-      previous = current;
-      current = current.next;
-    }
-
-    while(previous){
-      if(previous.value === 9){
-        previous.value = 0;
-        previous.prev.value ++;
-      }
-
-      if(previous.value === 10){
-        previous = 0;
-        previous.prev.value ++;
-      }
-      ///reset the previous
-      previous = previous.prev;
-    }    
-    list.print();
+  //create doubly linked list
+  let current = list.head;
+  let previous = null;
+  while(current){
+    current.prev = previous;
+    previous = current;
+    current = current.next;
   }
-
+  //add one to the last item in the linked list
+  previous.value ++;
+  //loop through backwards and carry over 
+  while(previous.prev){       
+    if(previous.value === 10){
+      previous.value = 0;
+      previous.prev.value ++;
+    }
+    previous = previous.prev;
+  }  
+  //add a zero node to the end of the linked list if 1st value is 10
+  if(previous.value === 10){
+    previous.value = 1;
+    list.append('0');
+  }
+  list.print();
+  return list;
 }
 
 printList(myList);
