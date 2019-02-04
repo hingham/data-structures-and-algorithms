@@ -132,15 +132,15 @@ class Linkedlist {
 
 }
 
-let list = new Linkedlist();
+// let list = new Linkedlist();
 
-list.insert('Hannah');
-list.insert('emi');
-list.insert('jessie');
-list.insert('28');
+// list.insert('Hannah');
+// list.insert('emi');
+// list.insert('jessie');
+// list.insert('28');
 
-list.getValue( 10);
-console.log(util.inspect(list,{depth:10}));
+// list.getValue( 10);
+// console.log(util.inspect(list,{depth:10}));
 
 module.exports = {Linkedlist};
 
