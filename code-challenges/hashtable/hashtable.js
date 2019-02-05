@@ -33,18 +33,6 @@ class Hashtable {
     return null;
   }
 
-  search(linkList, key){
-    let item = null;
-    const searchList = (node)=>{
-      //base case
-      if(node === null){return;}
-      if(Object.keys(node.value)[0] === key){ return item = node.value;}
-      searchList(node.next);
-    };
-    searchList(linkList.head);
-    return item;
-  }
-
   contains(key){
     let hash = this.hash(key);
     let bool = false;
@@ -59,6 +47,18 @@ class Hashtable {
     return bool;
   }
 
+  search(linkList, key){
+    let item = null;
+    const searchList = (node)=>{
+      //base case
+      if(node === null){return;}
+      if(Object.keys(node.value)[0] === key){ return item = node.value;}
+      searchList(node.next);
+    };
+    searchList(linkList.head);
+    return item;
+  }
+
   // A method/function named GetHash that takes in a key and returns the index in the array the key is stored.
   GetHash(key){
     return this.hash(key);
@@ -67,19 +67,7 @@ class Hashtable {
 }
 
 
-let myHash = new Hashtable(4);
 
-myHash.hash('hannah');
-myHash.add('hannah', 28);
-myHash.add('nick', 22);
-myHash.add('jess', 30);
-myHash.add('jenny', 29);
-myHash.add('christie', 15);
-myHash.add('John', 50);
-
-myHash.find('nick');
-
-console.log(util.inspect(myHash, {showHidden: false, depth: null}));
 
 module.exports = Hashtable;
 
