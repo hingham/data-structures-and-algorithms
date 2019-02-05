@@ -47,6 +47,26 @@ Assertions: 3 test assertions for each method to check that it returns the corre
 ![image](./assets/repeated-words.JPG)
 
 
+### Day Three: Repeated Words 
+
+Run test: `npm run test-watch`
+Assertions: 3 test assertions for each method to check that it returns the correct value
+
+#### Description: 
+Write a function called tree_intersection that takes two binary tree parameters.
+Without utilizing any of the built-in library methods available to your language, return a set of values found in both trees.
+
+#### Approach: 
+* Interate through the first tree and add each node value to the hash table
+* Interact throug the second tree and check if the value is in the table. If so, add that value to the arr that gets returned
+
+#### Big O
+* The big O of a breadth first search is O(w). The look up is 
+
+[![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
+![image](./assets/tree-intersection.JPG)
+
+
 
 
 
