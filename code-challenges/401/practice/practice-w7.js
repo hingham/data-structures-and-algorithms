@@ -3,77 +3,51 @@ const ll = require('../../linkedList/linked-list.js');
 const sq = require('../../stackAndQueues/stacks-and-queues.js');
 
 
-let myList = new ll.Linkedlist();
-
-myList.append(9);
-myList.append(9);
-myList.append(9);
-
-
-console.log(`myList ${myList}`);
-
-function printList(list){
-  let current = list.head;
-  let previous = null;
-  while(current){
-    current.prev = previous;
-    previous = current;
-    current = current.next;
-  }
-  //add one to the last item in the linked list
-  previous.value ++;
-  //loop through backwards and carry over 
-  while(previous.prev){       
-    if(previous.value === 10){
-      previous.value = 0;
-      previous.prev.value ++;
-    }
-    previous = previous.prev;
-  }  
-  //add a zero node to the end of the linked list if 1st value is 10
-  if(previous.value === 10){
-    previous.value = 1;
-    list.append('0');
-  }
-  list.print();
-  return list;
-}
-
-printList(myList);
-
 let myStack = new sq.Stack();
 myStack.push(1);
 myStack.push(2);
 myStack.push(3);
 
 const printStack = (stack) =>{
-  let current = stack.top;
-
-  while(current){
-    console.log(current.value);
-    current = current.next;
+  let arr= [];
+  function rstack(node){
+    if(!node.next){
+      arr.push(node.value);
+    }
+    else{
+      rstack(node.next);
+      arr.push(node.value);
+    }
   }
+  rstack(stack.top);
+  console.log(arr);
+
 };
 
 printStack(myStack);
 
-let myQueue = new sq.Queue();
-myQueue.enqueue(1);
-myQueue.enqueue(2);
-myQueue.enqueue(3);
+// let myQueue = new sq.Queue();
+// myQueue.enqueue(1);
+// myQueue.enqueue(2);
+// myQueue.enqueue(3);
 
 
-const printQ = (queue)=>{
-  let current = queue.front;
+// const printQ = (queue)=>{
+//   let arr = [];
+//   function rQ(node){
+//     if(node.next===null){
+//       arr.push(node.value);
+//     }
+//     rQ(node.next);
+//     arr.push(node.value);
+//   }
+//   console.log(queue.front.next);
 
-  while(current){
-    console.log(current.value);
-    current = current.next;
-  }
+//   rQ(queue.front);
+//   console.log(arr);
+// };
 
-};
-
-printQ(myQueue);
+// printQ(myQueue);
 
 let myTree = new t.BinaryTree();
 
@@ -152,5 +126,23 @@ function postOrder(tree){
 }
     
 postOrder(myTree);
+
+
+function breadthFirst(tree){
+
+  let tArr = [tree.root];
+  while(tArr.length>0){
+    let node = tArr.shift();
+    console.log(node.value);
+    if(node.left){
+      tArr.push(node.left);
+    }
+    if(node.right){
+      tArr.push(node.right);
+    }
+  }
+}
+
+breadthFirst(myTree);
 
 
