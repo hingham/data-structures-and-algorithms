@@ -1,7 +1,4 @@
-let myMap = new Map();
-myMap.set('hannah', 'nick');
-myMap.set('snow', 'rain');
-console.log(myMap);
+'use strict'
 
 
 class Node{
@@ -18,6 +15,8 @@ class Graph{
   addNode(value){
     let node = new Node(value);
     this.adjacencyList.set(node, []);
+    this.nodes ++;
+
     return node;
   }
   addEdge(startNode, endNode, weight = 0){
@@ -35,7 +34,6 @@ class Graph{
       node: startNode,
       weight: 0,
     });
-    this.nodes ++;
   }
 
   getNodes(){
@@ -63,12 +61,13 @@ class Graph{
       console.log('node', node);
 
       let nArr = this.getNeighbors(node);
-      nArr.forEach((edge)=>{
-        if(!nodeArr.includes(edge.node)){
-          nodeQ.push(edge.node);
-          nodeArr.push(edge.node);
+      console.log('neighbors array', nArr);
+      for(let i = 0; i< nArr.length; i++){
+        if(!nodeArr.includes(nArr[i].node)){
+          nodeQ.push(nArr[i].node);
+          nodeArr.push(nArr[i].node);
         }
-      });
+      }
     }
     return nodeArr;
   }
@@ -94,3 +93,7 @@ myGraph.addEdge(dog, ben);
 console.log('my neighbors ', myGraph.getNeighbors(hannah));
 console.log(myGraph.size());
 console.log('breadth first', myGraph.breadthFirst(nick));
+
+console.log('get nodes', myGraph.getNodes()) ;
+console.log(myGraph.adjacencyList.size);
+module.exports = {myGraph, Graph, nick};

@@ -21,4 +21,10 @@ Create a graph class with the following methods:
 * Size() Efficiency: O(1)
   * Returns the total number of nodes in the graph
 
-## Approach & Efficiency
+## DAY 2: Breadth First Search:
+##Challenge: Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
+
+## Description: Use queue, array and a while loop to interate through the graph. Add neighbor nodes to the queue and array if not already in the array. Dequeue the first item in the queue each time through the while loop. Continue while looping until the queue is empty.
+
+![image](breadth-uml.JPG)
+[travis]();
