@@ -26,5 +26,5 @@ Create a graph class with the following methods:
 
 ## Description: Use queue, array and a while loop to interate through the graph. Add neighbor nodes to the queue and array if not already in the array. Dequeue the first item in the queue each time through the while loop. Continue while looping until the queue is empty.
 
-![image](breadth-uml.JPG)
+![image](IMG-3703.JPG)
 [![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
