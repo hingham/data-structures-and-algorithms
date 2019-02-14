@@ -19,8 +19,6 @@ myGraph.addEdge(ny, boston, 50);
 
 console.log('adjacency list', myGraph.adjacencyList);
 
-
-
 function getFlights(arr, graph){
   let cost = 0;
   let node;
