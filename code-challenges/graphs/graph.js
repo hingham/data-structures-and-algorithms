@@ -14,25 +14,24 @@ class Graph{
   }
   addNode(value){
     let node = new Node(value);
-    this.adjacencyList.set(node, []);
+    this.adjacencyList.set(value, []);
     this.nodes ++;
-
     return node;
   }
-  addEdge(startNode, endNode, weight = 0){
-    if(!this.adjacencyList.has(startNode)||
-    !this.adjacencyList.has(endNode))
+  addEdge(startNode, endNode, weight){
+    if(!this.adjacencyList.has(startNode.value)||
+    !this.adjacencyList.has(endNode.value))
       throw new Error('Error invalid nodes');
 
-    let startAdjacencies = this.adjacencyList.get(startNode);
+    let startAdjacencies = this.adjacencyList.get(startNode.value);
     startAdjacencies.push({
       node: endNode,
-      weight: 0,
+      weight: weight,
     });
-    let endAdjacencies = this.adjacencyList.get(endNode);
+    let endAdjacencies = this.adjacencyList.get(endNode.value);
     endAdjacencies.push({
       node: startNode,
-      weight: 0,
+      weight: weight,
     });
   }
 
@@ -40,12 +39,12 @@ class Graph{
     return this.adjacencyList.keys();
   }
   
-  getNeighbors(node){
-    if(!this.adjacencyList.has(node)){
+  getNeighbors(value){
+    if(!this.adjacencyList.has(value)){
       return null;
     }
     else{
-      return this.adjacencyList.get(node);
+      return this.adjacencyList.get(value);
     }
   }
 
@@ -72,6 +71,35 @@ class Graph{
     return nodeArr;
   }
 
+  depthFirst(adjacencyList){
+    let entries = adjacencyList.entries();
+    let visited = new Set();
+    let arr = [];
+
+    const _walk = (node, edges) =>{
+      if ( visited.has(node) || (edges.length === 0) ){
+        return;
+      }
+
+      visited.add(node);
+      console.log('\n', 'visited', visited);
+      arr.push(node);
+
+      for(let i = 0; i<edges.length; i++){
+        console.log('edges', node, edges, edges[i].node.value);
+        let n = this.adjacencyList.get(edges[i].node.value);
+        _walk(edges[i].node.value, n);
+      }
+
+    }
+    let first = entries.next().value
+    _walk(first[0], first[1]);
+    console.log('arr', arr);
+    return;
+  }
+
+
+
 }
 
 let myGraph = new Graph();
@@ -82,18 +110,13 @@ let cat = myGraph.addNode('cat');
 let owl = myGraph.addNode('owl');
 let ben = myGraph.addNode('ben');
 
+myGraph.addEdge(hannah, cat);
+myGraph.addEdge(cat, dog);
 myGraph.addEdge(hannah, nick);
-myGraph.addEdge(dog, cat);
-myGraph.addEdge(hannah, dog);
-myGraph.addEdge(nick, dog);
-myGraph.addEdge(nick, cat);
-myGraph.addEdge(nick, owl);
-myGraph.addEdge(hannah, owl);
-myGraph.addEdge(dog, ben);
-console.log('my neighbors ', myGraph.getNeighbors(hannah));
-console.log(myGraph.size());
-console.log('breadth first', myGraph.breadthFirst(nick));
+myGraph.addEdge(owl, ben);
+myGraph.addEdge(ben, hannah);
 
-console.log('get nodes', myGraph.getNodes()) ;
-console.log(myGraph.adjacencyList.size);
-module.exports = {myGraph, Graph, nick};
+
+myGraph.depthFirst(myGraph.adjacencyList);
+
+module.exports = Graph;
