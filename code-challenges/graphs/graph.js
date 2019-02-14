@@ -78,28 +78,21 @@ class Graph{
 
     const _walk = (node, edges) =>{
       if ( visited.has(node) || (edges.length === 0) ){
-        console.log('visited', visited);
-        console.log('returned in _walk');
         return;
       }
+
       visited.add(node);
+      console.log('\n', 'visited', visited);
       arr.push(node);
-      // console.log('Node:', edges);
 
       for(let i = 0; i<edges.length; i++){
-        console.log('edges', edges[i].node.value);
+        console.log('edges', node, edges, edges[i].node.value);
         let n = this.adjacencyList.get(edges[i].node.value);
-        console.log('n',n);
         _walk(edges[i].node.value, n);
       }
-      
-      console.log('visited', visited);
-      // console.log(visited.has(node));
-      // console.log('node', node[1]);
 
     }
     let first = entries.next().value
-    // console.log('first', first);
     _walk(first[0], first[1]);
     console.log('arr', arr);
     return;
@@ -117,14 +110,12 @@ let cat = myGraph.addNode('cat');
 let owl = myGraph.addNode('owl');
 let ben = myGraph.addNode('ben');
 
+myGraph.addEdge(hannah, cat);
+myGraph.addEdge(cat, dog);
 myGraph.addEdge(hannah, nick);
-myGraph.addEdge(dog, cat);
-myGraph.addEdge(hannah, dog);
-myGraph.addEdge(nick, dog);
-myGraph.addEdge(nick, cat);
-myGraph.addEdge(nick, owl);
-myGraph.addEdge(hannah, owl);
-myGraph.addEdge(dog, ben);
+myGraph.addEdge(owl, ben);
+myGraph.addEdge(ben, hannah);
+
 
 myGraph.depthFirst(myGraph.adjacencyList);
 
