@@ -1,6 +1,8 @@
 # Sorts
 Sorting algorithms sort a collection of items into an ordered collection. 
 
+[![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
+
 ## Challenge: Merge Sort
 Write a function that accepts an array of unsorted integers, and returns a sorted array by a recursive mergesort algorithm.
 * Merge: Merges two input arrays given two sub arrays that are ordered
@@ -21,6 +23,6 @@ Write a function that accepts an array of unsorted integers, and returns a sorte
 * retains all numbers, included repeated values
 
 ### Whiteboard:
-[image](./assets/merge-sort.JPG)
+![image](assets/merge-sort.JPG)
 
 
