@@ -23,4 +23,5 @@ Write a function that accepts an array of unsorted integers, and returns a sorte
 ### Whiteboard:
 [image](./assets/merge-sort.JPG)
 
-
+## QuickSort
+### Description: Write a function that accepts an array of integers, and returns an array sorted by a recursive quicksort algorithm.
