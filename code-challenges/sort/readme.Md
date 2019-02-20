@@ -43,6 +43,8 @@ d is the maximum number of digits of the number collection
 Space: O(n+b)
 Time: O(d(n+b))
 
+[![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
+
 
 ### Whiteboard:
 [image](./assets/radix-sort.JPG)
