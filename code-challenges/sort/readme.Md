@@ -25,3 +25,24 @@ Write a function that accepts an array of unsorted integers, and returns a sorte
 
 ## QuickSort
 ### Description: Write a function that accepts an array of integers, and returns an array sorted by a recursive quicksort algorithm.
+
+
+### Whiteboard:
+[image](./assets/quick-sort.JPG)
+
+## Radix Sort
+### Description: Write a function that accepts an array of positive integers, and returns an array sorted by a radix sort algorithm.
+
+## Description: Sort an array using radix sort. Sort the array digit by digit. Start with the least significant digit. Create a buckets array that stores 10 empty buckets. Sort the items in the array digit by digit. 
+
+## Big O
+b is the base system of the numbers
+d is the maximum number of digits of the number collection
+Space: O(n+b)
+Time: O(d(n+b))
+
+
+### Whiteboard:
+[image](./assets/radix-sort.JPG)
+
+
