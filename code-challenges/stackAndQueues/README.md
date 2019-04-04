@@ -1,15 +1,15 @@
-#Stacks and Queues:
+# Stacks and Queues:
 ### Create two classes for stacks and queues. For each class, write methods to add, remove, and return the nodes added to the class. For each class, use the node constructor as specificied: 
 * Create a Node class that has properties for the value stored in the Node, and a pointer to the next node.
 
-##Stack Class & Methods
+### Stack Class & Methods
 * Create a Stack class that has a top property. It creates an empty Stack when instantiated.
 * This object should be aware of a default empty value assigned to top when the stack is created.
 * Define a method called push which takes any value as an argument and adds a new node with that value to the top of the stack with an O(1) Time performance.
 * Define a method called pop that does not take any argument, removes the node from the top of the stack, and returns the node.
 * Define a method called peek that does not take an argument and returns the node located on the top of the stack.
 
-##Queue Class & Methods
+### Queue Class & Methods
 * Create a Queue class that has a top property. It creates an empty queue when instantiated.
 * This object should be aware of a default empty value assigned to front when the queue is created.
 * Define a method called enqueue which takes any value as an argument and adds a new node with that value to the back of the queue with an O(1) Time performance.
@@ -18,7 +18,7 @@
 
 
 
-# Tests:
+### Tests:
 Assertions: 
 * push: push a node to the top; set the next value of the new node to be the previous top; will return the original stack if no value is provided
 
@@ -34,39 +34,37 @@ Assertions:
 
 
 
-##Day 2: Stacks With Queues:
+## Day 2: Stacks With Queues:
 
-### Description: Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement the standard queue interface, but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods: enqueue(value) which inserts value into the PseudoQueue, using a first-in, first-out approach. dequeue() which extracts a value from the PseudoQueue, using a first-in, first-out approach. The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
+#### Description: Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement the standard queue interface, but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods: enqueue(value) which inserts value into the PseudoQueue, using a first-in, first-out approach. dequeue() which extracts a value from the PseudoQueue, using a first-in, first-out approach. The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
 
-### Challenge: Write the enqueue and dequeue methods using the two pop and push method with stacks. Instantiate two stacks in you methods to help you write this code. 
-
-![image](assets/queueWithStack.js)
+#### Challenge: Write the enqueue and dequeue methods using the two pop and push method with stacks. Instantiate two stacks in you methods to help you write this code. 
 [![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
+![image](assets/queueWithStack.js)
 
 
-##Day 3: Fifo Animals Shelfter with FIFO:
+## Day 3: Fifo Animals Shelfter with FIFO:
 
-### Description: Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.Implement the following methods: enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object. dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
+#### Description: Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.Implement the following methods: enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object. dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
 
-### Challenge: Write the class. Use the first in first out principal to take the elements out of the class. When you dequeue, dequeue the first of the animals requested and remove the animal from the list. 
+#### Challenge: Write the class. Use the first in first out principal to take the elements out of the class. When you dequeue, dequeue the first of the animals requested and remove the animal from the list. 
 
 ![image](assets/animal-shelfter-wb.JPG);
 
-##Day 4: 
+## Day 4: 
 
-###Description: On your main file, create…
+#### Description: On your main file, create…
 Your function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets:
 
 Round Brackets : ()
 Square Brackets : []
 Curly Brackets : {}
 
-###Challenge: Write the function that takes in any string. Have the string check the validity of the statement. Notably, make sure that all the brackets are balanced and self closing. If there is an error, then return false.
-
-
-![image](assets/wb-multi-bracket.JPG);
+#### Challenge: Write the function that takes in any string. Have the string check the validity of the statement. Notably, make sure that all the brackets are balanced and self closing. If there is an error, then return false.
 
 [![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
+
+![image](assets/wb-multi-bracket.JPG);
 
 travis link: https://www.travis-ci.com/
 
