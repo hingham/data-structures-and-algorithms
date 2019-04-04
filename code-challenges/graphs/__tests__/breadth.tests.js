@@ -1,15 +1,15 @@
 'use strict';
 
-const graph = require('../graph.js');
+// const graph = require('../graph.js');
 
 
 describe('breadth firsth', () =>{
 
   describe('it is alive', () =>{
     it('is alive', () =>{
-      expect(true).toEqual(true);
-    });
+      expect(true).toBe(true)
   });
+});
 
   // let myGraph = new graph.Graph()
   // let breadth = yGraph.breadthFirst(graph.nick);

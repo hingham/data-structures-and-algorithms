@@ -8,11 +8,11 @@ describe('graphs', () =>{
     });
   });
 
-  let myGraph = new graph.Graph();
+  // let myGraph = new graph.Graph();
 
-  let bunny = myGraph.addNode('bunny');
-  let mouse = myGraph.addNode('mouse');
-  graph.myGraph.addEdge(bunny, mouse);
+  // let bunny = myGraph.addNode('bunny');
+  // let mouse = myGraph.addNode('mouse');
+  // graph.myGraph.addEdge(bunny, mouse);
   describe('add', () =>{
     xit('add a node to the graph', () =>{
       let oldSize =graph.myGraph.nodes;
