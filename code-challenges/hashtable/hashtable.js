@@ -40,7 +40,6 @@ class Hashtable {
       this.search(this.table[hash], key);
       let keyObj = this.search(this.table[hash], key);
       if(keyObj){
-        console.log(keyObj);
         return bool = true;
       }
     }

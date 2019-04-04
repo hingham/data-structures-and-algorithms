@@ -12,10 +12,8 @@ myStack.push(4);
 function printStack(stack){
   let current = stack.top;
   while(current.next){
-    console.log(current.value);
     current = current.next;
   }
-  console.log(current.value);
 }
 
 printStack(myStack);
@@ -30,7 +28,6 @@ myQueue.enqueue(4);
 
 function printQueue(queue){
   while(queue.front){
-    console.log(queue.dequeue());
   }
 }
 
@@ -47,10 +44,8 @@ myList.insert(4);
 function printList(list){
   let current = myList.head;
   while(current.next){
-    console.log(current.value);
     current= current.next;
   }
-  console.log(current.value);
 }
 
 let myTree = new t.BinaryTree();
@@ -89,7 +84,6 @@ function preOrder(tree){
     }
 
   _walk(tree.root);
-  console.log(arr);
   return arr;
 }
 
@@ -109,7 +103,6 @@ function inOrder(tree){
     }
 }
     _walk(tree.root);
-    console.log(arr);
     return arr;
   
 }
@@ -131,7 +124,6 @@ function postOrder(tree){
     arr.push(node.value);
     }
     _walk(tree.root);
-    console.log(arr);
     return arr;
   
 }
@@ -150,7 +142,6 @@ function breadth(tree){
         a.unshift(val.value);
     }
 
-    console.log(a);
 }
 
 breadth(myTree);

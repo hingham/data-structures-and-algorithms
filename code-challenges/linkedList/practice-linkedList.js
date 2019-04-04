@@ -13,12 +13,9 @@ linkList.insert('vacation');
 function printValues (linkedList){
   let current = linkedList.head;
   while(current.next){
-    console.log(current.value);
     current = current.next;
   }
-  console.log(current.value);
   return;
 }
 
 printValues(linkList);
-console.log(linkList);

@@ -63,7 +63,6 @@ class Linkedlist {
       valArr.push(currentVal.value);
       currentVal = currentVal.next;
     }
-    console.log('all values ', valArr);
     return valArr;
   }
 

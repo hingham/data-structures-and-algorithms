@@ -1,12 +1,9 @@
 append(value) {
     //if head is not assigned, assign head the value and a next value
     let node = new Node (value);
-    // console.log('hi', node);
       
     if( ! this.head){
-  
         this.head = node;
-  
         return;
       }
   

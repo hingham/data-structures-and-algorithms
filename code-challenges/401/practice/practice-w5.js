@@ -10,7 +10,6 @@ myList.append(9);
 myList.append(9);
 
 
-console.log(`myList ${myList}`);
 
 function printList(list){
   let current = list.head;
@@ -50,7 +49,6 @@ const printStack = (stack) =>{
   let current = stack.top;
 
   while(current){
-    console.log(current.value);
     current = current.next;
   }
 };
@@ -67,7 +65,6 @@ const printQ = (queue)=>{
   let current = queue.front;
 
   while(current){
-    console.log(current.value);
     current = current.next;
   }
 
@@ -110,7 +107,6 @@ function preOrder(tree){
     }
   };
   _walk(tree.root);
-  console.log(tArr);
 }
 
 preOrder(myTree);
@@ -130,7 +126,6 @@ function inOrder(tree){
     }
   };
   _walk(tree.root);
-  console.log(tArr);
 }
   
 inOrder(myTree);
@@ -148,7 +143,6 @@ function postOrder(tree){
 
   };
   _walk(tree.root);
-  console.log(tArr);
 }
     
 postOrder(myTree);

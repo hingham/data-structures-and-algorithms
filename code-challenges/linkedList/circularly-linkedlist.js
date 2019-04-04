@@ -6,8 +6,6 @@ myList.insert('b');
 myList.insert('c');
 myList.insert('d');
 
-console.log(myList.head.next);
-
 //input linkedlist
 //output boolean
 //true if list is circular
@@ -24,6 +22,5 @@ function isCirucular(ll){
     return false;
 }
 
-console.log( isCirucular(myList) );
 
 //1st: is b->c->d->null ===  a->b->c->d->null

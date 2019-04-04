@@ -1,127 +1,114 @@
-const t = require('../../tree/tree.js');
-const ll = require('../../linkedList/linked-list.js');
-const sq = require('../../stackAndQueues/stacks-and-queues.js');
-const HashTable = require('../../hashtable/hashtable.js');
+const t = require("../../tree/tree.js");
+const ll = require("../../linkedList/linked-list.js");
+const sq = require("../../stackAndQueues/stacks-and-queues.js");
+const HashTable = require("../../hashtable/hashtable.js");
 
 let myStack = new sq.Stack();
 myStack.push(1);
 myStack.push(2);
 myStack.push(3);
 
-function iterateStack(stack){
-    let current = stack.top;
-    while(current){
-        console.log(current.value);
-        current= current.next;
-    }
+function iterateStack(stack) {
+  let current = stack.top;
+  while (current) {
+    current = current.next;
+  }
 }
 
 iterateStack(myStack);
 
-function recurseStack(stack){
-    let top = stack.top;
-    const _walk = (node)=>{
-        if(node ===null){
-            return;
-        }
-        console.log(node.value);
-        _walk(node.next);
+function recurseStack(stack) {
+  let top = stack.top;
+  const _walk = node => {
+    if (node === null) {
+      return;
     }
-    _walk(stack.top);
+    _walk(node.next);
+  };
+  _walk(stack.top);
 }
-
-console.log('resurse', recurseStack(myStack) );
 
 let myList = new ll.Linkedlist();
 
-myList.insert('a');
-myList.insert('b');
-myList.insert('c');
+myList.insert("a");
+myList.insert("b");
+myList.insert("c");
 
-function linkListIterate(ll){
-    let current = ll.head;
-    while(current){
-        console.log(current.value);
-        current = current.next;
-    }
-
+function linkListIterate(ll) {
+  let current = ll.head;
+  while (current) {
+    current = current.next;
+  }
 }
 
 linkListIterate(myList);
 
-function linkedListRecurse(ll){
-    let head = ll.nead;
-    const _walk = (node) => {
-        if(node === null){
-            return;
-        }
-        console.log(node.value);
-        _walk(node.next);
+function linkedListRecurse(ll) {
+  let head = ll.nead;
+  const _walk = node => {
+    if (node === null) {
+      return;
     }
-    _walk(head);
+    _walk(node.next);
+  };
+  _walk(head);
 }
 
 linkListIterate(myList);
 
-console.log('queues');
 let myQ = new sq.Queue();
-myQ.enqueue('x');
-myQ.enqueue('y');
-myQ.enqueue('z');
+myQ.enqueue("x");
+myQ.enqueue("y");
+myQ.enqueue("z");
 
-function iterateQ(q){
-    let current = q.front;
-    while(current){
-        console.log(current.value);
-        current = current.next;
-    }
-
+function iterateQ(q) {
+  let current = q.front;
+  while (current) {
+    current = current.next;
+  }
 }
 
 iterateQ(myQ);
 
-function recurseQ(q){
-    let current = q.front;
-    const _walk = (node) =>{
-        if(node === null){
-            return;
-        }
-        console.log(node.value);
-        _walk(node.next);
+function recurseQ(q) {
+  let current = q.front;
+  const _walk = node => {
+    if (node === null) {
+      return;
     }
-    _walk(current);
+    _walk(node.next);
+  };
+  _walk(current);
 }
 
 recurseQ(myQ);
 
 let myHash = new HashTable(100);
-myHash.add('hannah', 'h');
-myHash.add('nick', 'n');
-myHash.add('ginger', 'g');
+myHash.add("hannah", "h");
+myHash.add("nick", "n");
+myHash.add("ginger", "g");
 
-function iterateHash(hash){
-    for(let i = 0; i<hash.table.length; i++){
-        if(hash.table[i]){
-            console.log(hash.table[i]);
-        }
+function iterateHash(hash) {
+  for (let i = 0; i < hash.table.length; i++) {
+    if (hash.table[i]) {
     }
+  }
 }
 
 iterateHash(myHash);
 
-function iterateHash(hash){
-    const _walk = (idx) => {
-        if(idx === hash.table.length){
-            return;
-        }
-
-        if(hash.table[idx]){
-            console.log(hash.table[idx]);
-        }
-
-        _walk(idx+1);
+function iterateHash(hash) {
+  const _walk = idx => {
+    if (idx === hash.table.length) {
+      return;
     }
-    _walk(0);
+
+    if (hash.table[idx]) {
+    }
+
+    _walk(idx + 1);
+  };
+  _walk(0);
 }
 
 iterateHash(myHash);

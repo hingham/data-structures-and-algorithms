@@ -84,7 +84,6 @@ function preOrder(tree){
     }
   };
   _walk(tree.root);
-  console.log(tArr);
 }
 
 preOrder(myTree);
@@ -104,7 +103,6 @@ function inOrder(tree){
     }
   };
   _walk(tree.root);
-  console.log(tArr);
 }
   
 inOrder(myTree);
@@ -122,7 +120,6 @@ function postOrder(tree){
 
   };
   _walk(tree.root);
-  console.log(tArr);
 }
     
 postOrder(myTree);
@@ -133,7 +130,6 @@ function breadthFirst(tree){
   let tArr = [tree.root];
   while(tArr.length>0){
     let node = tArr.shift();
-    console.log(node.value);
     if(node.left){
       tArr.push(node.left);
     }

@@ -10,7 +10,6 @@ function reverseArray(inArray){
         newArray[counter]=inArray[i];
         counter++;
     }
-    console.log(newArray);
     return newArray;
 };
 
