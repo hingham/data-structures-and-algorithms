@@ -1,6 +1,6 @@
 'use strict';
 
-class animalShelter {
+class AnimalShelter {
   constructor(){
     this.pets = [];
     this.front = this.pets[0];
@@ -33,7 +33,7 @@ class animalShelter {
   }
 }
 
-let myAnimal = new animalShelter();
+let myAnimal = new AnimalShelter();
 
 myAnimal.enqueue({type: 'cat', name: 'poppy'});
 myAnimal.enqueue({type: 'cat', name: 'cindy'});
@@ -44,3 +44,6 @@ console.log(myAnimal.pets);
 console.log( myAnimal.dequeue('cat') );
 
 console.log('new shelter ', myAnimal.pets);
+
+module.exports = {AnimalShelter};
+
