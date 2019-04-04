@@ -1,32 +1,36 @@
 
 const arrayShift = module.exports = {};
 
-console.log('hello');
 
 arrayShift.insertShiftArray = (arr, item) => {
-    if(arguments.length < 2){
+    console.log(!!!item);
+    if(!!!item){
         return null;
       }
+
+    
       
   let result = [];
+  arr[arr.length] = 0;
   let l = arr.length;
+  console.log(l);
+  let middle = Math.floor(l/2 );
+  
 
+  for (let i = l-1; i >=middle; i--){
+    console.log(arr[i]);
+    arr[i] = arr[i-1];
 
-  for (let i = 0; i<l+1; i++){
-    if(i< Math.ceil(l/2)){
-      result[i]=arr[i];
+    if( i === middle){
+      arr[i] = item;
+      console.log('middle');
     }
-    else if(i === Math.ceil(l/2)){
-      result[i] = item;
-    }
-    else if (i > Math.ceil(l/2)){
-      result[i] = arr[i-1];
-    }
+  
   }
-  return result;
+  return arr;
 };
 
 
-console.log(arrayShift.insertShiftArray([1,2,3], 'x'));
+console.log(arrayShift.insertShiftArray([1,2,3, 4], 'x'));
 // console.log(array.insertShiftArray([1,2,3], 'x'));
  
