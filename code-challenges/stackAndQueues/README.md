@@ -40,7 +40,6 @@ Assertions:
 
 #### Challenge: Write the enqueue and dequeue methods using the two pop and push method with stacks. Instantiate two stacks in you methods to help you write this code. 
 [![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
-![image](assets/queueWithStack.js)
 
 
 ## Day 3: Fifo Animals Shelfter with FIFO:
