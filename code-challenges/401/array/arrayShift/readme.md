@@ -8,4 +8,4 @@
 ## Craete a new array, loop through the array, and assign values to the new array. For each loop, check if i is less than, equal to, or greater than the length of the array divided by 2. Assing a new value to your new array, and then return that new array.
 
 # Solution: 
-![image](assets/whiteboard.JPG)
+![image](assets/whitboard.JPG)

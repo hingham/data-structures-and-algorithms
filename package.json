@@ -1,0 +1,27 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "description": "code-challenges",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint **/*.js",
+    "test": "jest --version --coverage",
+    "test-watch": "jest --watchAll --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hingham/data-structures-and-algorithms.git"
+  },
+  "author": "Hannah Ingham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hingham/data-structures-and-algorithms/issues"
+  },
+  "homepage": "https://github.com/hingham/data-structures-and-algorithms#readme",
+  "dependencies": {
+    "eslint": "^5.12.0",
+    "faker": "^4.1.0",
+    "jest": "^23.6.0"
+  }
+}
