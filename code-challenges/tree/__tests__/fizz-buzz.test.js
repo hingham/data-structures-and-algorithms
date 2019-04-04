@@ -18,7 +18,6 @@ c.left = f;
 b.left = d;
 b.right = e;
 testTree.root = a;
-console.log(testTree);
 fizzBuzz(testTree);
 
 

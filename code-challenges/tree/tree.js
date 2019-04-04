@@ -30,7 +30,6 @@ class BinaryTree{
       }
     };
     _walk(this.root);
-    // console.log(nodes);
     return nodes;
   }
 
@@ -49,7 +48,6 @@ class BinaryTree{
       }
     };
     _walk(this.root);
-    // console.log(nodes);
     return nodes;
   }
 
@@ -68,7 +66,6 @@ class BinaryTree{
       nodes.push(node.value);
     };
     _walk(this.root);
-    // console.log(nodes);
     return nodes;
   }
 

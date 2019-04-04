@@ -24,7 +24,6 @@ class AnimalShelter {
     value = this.pets[i];
     idx = i;
     for(let j = idx + 1; j< this.pets.length; j++){
-      console.log(idx, j );
       this.pets[idx] = this.pets[j];
       idx++;
     }
@@ -38,12 +37,6 @@ let myAnimal = new AnimalShelter();
 myAnimal.enqueue({type: 'cat', name: 'poppy'});
 myAnimal.enqueue({type: 'cat', name: 'cindy'});
 myAnimal.enqueue({type: 'dog', name: 'marty'});
-
-console.log(myAnimal.pets);
-
-console.log( myAnimal.dequeue('cat') );
-
-console.log('new shelter ', myAnimal.pets);
 
 module.exports = {AnimalShelter};
 

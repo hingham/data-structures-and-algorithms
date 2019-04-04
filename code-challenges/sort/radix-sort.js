@@ -1,22 +1,5 @@
 'use strict';
 
-//101
-//length : 3
-// 101 / (10 * 2)
-// 101 / (10 * 3)
-
-// function getDigit(num, placeholder){
-//     let digits = num.toString().split('').length;
-//     console.log('length', digits);
-//     let power = digits + placeholder;
-//     let digit = (num / (Math.pow(10, power) ) ) * 10;
-//     // digit = Math.floor(digit *);
-//     console.log('digit', digit);
-//     return digit; 
-// }
-
-// getDigit(101, 2);
-
 
 "use strict";
 

@@ -10,7 +10,6 @@ function treeIntersection(t1, t2){
   let hash = new Hashtable(1024);
 
   while(qArr.length){
-    console.log('searching tree');
     let node = qArr.shift();
     if(node.left){qArr.push(node.left);}
     if(node.right){ qArr.push(node.right);}
@@ -18,7 +17,6 @@ function treeIntersection(t1, t2){
   }
   qArr = [t2.root];
   while(qArr.length){
-    console.log('searching tree');
     let node = qArr.shift();
     if(node.left){qArr.push(node.left);}
     if(node.right){ qArr.push(node.right);}
@@ -27,8 +25,6 @@ function treeIntersection(t1, t2){
     }
   }
 
-  console.log('the hashtable', util.inspect(hash, {showHidden: false, depth: null}));
-  console.log('the arr', iArr);
   return iArr;
 }
 
@@ -36,7 +32,6 @@ function treeIntersection(t1, t2){
 function breadthFirstSearch(t, cb){
   let queue = [t.root];
   while(queue.length){
-    console.log('searching tree');
     let node = queue.shift();
     if(node.left){return queue.push(node.left);}
     if(node.right){return queue.push(node.right);}

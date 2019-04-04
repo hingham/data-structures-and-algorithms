@@ -21,7 +21,6 @@ function mergedList(l1, l2){
   };
   let curList1 = l1.head;
   let curList2 = l2.head;
-  console.log(curList1, curList2);
   
   while(curList1.next && curList2.next){
   
@@ -44,12 +43,10 @@ function mergedList(l1, l2){
   }
 
   curList1.next = curList2;
-  // console.log('final list' , l1.head);
   return l1;
 }
 
 mergedList(list, list2);
-console.log(list);
 
 list.print();
 

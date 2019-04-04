@@ -72,21 +72,4 @@ class Queue {
 }
 
 
-// let myQ = new Queue();
-// // console.log(myQ);
-// myQ.enqueue(1);
-// myQ.enqueue(2);
-// myQ.enqueue(3);
-
-// console.log('my Q ', myQ);
-
-// myQ.dequeue();
-// myQ.enqueue(3);
-
-
-// console.log('my Q peek', myQ.peek());
-// console.log('my top ', myQ);
-// console.log('my peek ', myQ.peek());
-// console.log('my stack did not change ', myQ );
-
 module.exports = {Stack, Queue, Node};
