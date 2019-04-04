@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "lint": "eslint **/*.js",
-    "test": "jest --version --coverage",
+    "test": "jest --verbose --coverage",
     "test-watch": "jest --watchAll --verbose --coverage"
   },
   "repository": {
@@ -22,6 +22,8 @@
   "dependencies": {
     "eslint": "^5.12.0",
     "faker": "^4.1.0",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1"
   }
 }
