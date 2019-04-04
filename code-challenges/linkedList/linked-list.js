@@ -14,7 +14,17 @@ class Linkedlist {
     this.head = null;
   }
 
-  append(value){  //if head is not assigned, assign head the value and a next value
+  insert(value){
+    let node = new Node (value);
+    let temp;
+    if(this.head){
+      temp = this.head;
+    }
+    this.head = node;
+    this.head.next = temp;
+  }
+ //if head is not assigned, assign head the value and a next value
+  append(value){ 
     let node = new Node (value);
     if(value){
       if( ! this.head){
@@ -59,13 +69,10 @@ class Linkedlist {
 
   insertAfter(value, newValue){
     let node = new Node(newValue);
-    // console.log(this.head);
     let current = this.head;
-    // let currentNext = this.head.next;
 
     while(current.value!== value) {
       current = current.next;
-
     }
 
     node.next = current.next;
@@ -129,20 +136,7 @@ class Linkedlist {
     }
     current.next = node;
   }
-
 }
-
-// let list = new Linkedlist();
-
-// list.insert('Hannah');
-// list.insert('emi');
-// list.insert('jessie');
-// list.insert('28');
-
-// list.getValue( 10);
-// console.log(util.inspect(list,{depth:10}));
-
-module.exports = {Linkedlist};
 
 function reverse(list){
   let prev = list.head;
@@ -163,6 +157,9 @@ function reverse(list){
   list.head = prev;
   return list;
 }
+
+module.exports = {Linkedlist};
+
 
 
 
