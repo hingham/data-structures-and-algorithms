@@ -9,8 +9,6 @@ class Node {
   }
 }
 
-
-
 class Linkedlist {
   constructor(){
     this.head = null;
@@ -25,8 +23,8 @@ class Linkedlist {
     this.head = node;
     this.head.next = temp;
   }
-
-  append(value){  //if head is not assigned, assign head the value and a next value
+ //if head is not assigned, assign head the value and a next value
+  append(value){ 
     let node = new Node (value);
     if(value){
       if( ! this.head){
@@ -39,10 +37,7 @@ class Linkedlist {
         current = current.next;
       }
       current.next = node;
-
-
     }
-   
   }
 
   //Check if a specific value is included in the node list
@@ -68,7 +63,6 @@ class Linkedlist {
       valArr.push(currentVal.value);
       currentVal = currentVal.next;
     }
-
     console.log('all values ', valArr);
     return valArr;
   }
@@ -99,20 +93,74 @@ class Linkedlist {
     previous.next = node;
   }
 
+  getValue(k){
+
+    if(!k){
+      return null;
+    }
+
+    let current= this.head;
+    let cnt = 0;
+    while(current.next){
+      current = current.next;
+      cnt++;
+    }
+
+    let target = cnt - k;
+    if(target < 0){ return false; }
+
+    cnt = 0;
+    current = this.head;
+
+    while(cnt < target){
+      current = current.next;
+      cnt ++;
+    }
+    return current.next.value;
+  }
+
+  insert(value){
+    let node = new Node(value);
+    if(!value){
+      return null;
+    }
+
+    if(!this.head){
+      this.head = node;
+      return;
+    }
+
+    let current = this.head;
+    while(current.next){
+      current = current.next;
+    }
+    current.next = node;
+  }
 }
 
+function reverse(list){
+  let prev = list.head;
+  let cur = prev.next;
+  let next = null; 
+  prev.next = null;
 
-let list = new Linkedlist();
+  if(!list.head){
+    return false;
+  }
 
-list.append('Hannah');
-list.append('emi');
-list.insert('jessie');
-list.insertAfter('Hannah', '28');
-// list.insertBefore('lisa', 'sam');
-console.log(util.inspect(list,{depth:10}));
+  while(cur !== null){
+    next = cur.next; //this becomes null on the last round
+    cur.next = prev; //2nd node points to 1st
+    prev = cur; //prev becomes the cur
+    cur = next;
+  }
+  list.head = prev;
+  return list;
+}
+
+module.exports = {Linkedlist};
 
 
-module.exports = { Linkedlist };
 
 
 

@@ -31,10 +31,28 @@ Correcly prints out all the values of the linked list as an array.
 ## Description: Write three new methods to do complete the challenge specified above.
 
 
-[![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
+
 ![image](assets/linked-list-img-3.JPG)
 ![image](assets/linked-list-img-2.JPG)
-![image](assets/lined-list-img-1.JPG)
+![image](assets/linked-list-img-1.JPG)
+
+##Day 3: 
+##Challenge: Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+##Description: Write the method described above on a linked list. Include tests for your new method.
+
+
+[![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
+![image](assets/kth-from-end.JPG)
+
+##Day 4:
+##Challenge: Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1). You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+##Description: Write the funciton in a new file. Write three tests that check the function. Before you type up the function, write your solution on a whiteboard. You may use methods from the class that you have written.
+
+
+[![Build Status](https://www.travis-ci.com/hingham/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/hingham/data-structures-and-algorithms)
+![image](assets/merge-wb.JPG)
 
 
 
