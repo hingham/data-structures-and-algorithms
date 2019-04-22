@@ -22,14 +22,39 @@ Write a function that accepts an array of unsorted integers, and returns a sorte
 * does not mutate the original array
 * retains all numbers, included repeated values
 
-### Whiteboard:
+#### Whiteboard:
 ![image](assets/merge-sort.JPG)
 
 ## QuickSort
 ### Description: Write a function that accepts an array of integers, and returns an array sorted by a recursive quicksort algorithm.
 
 
-### Whiteboard:
+### Quick-Sort-Inplace
+#### Description: 
+* write a function pivot 
+  * input: arr, start, end
+  * set the pivot value at start
+  * loop through values start -> end and put them in a left and right stack according to how values compare to pivot
+  * replace values in the original array with values from the left stack and right stack so that they are arranged to the left and right of the pivot appropriately
+  * place the pivot in it's correct place in the array
+  * return the value of the pivot
+
+* write a function quickSort
+  * input: arr
+  * call pivot to find the idx of the pivot
+  * call a helper function on everything before the pivot
+  * call helper on everything after the pivot
+
+* write a recursive helper function
+  * input: arr, start, end
+  * basecase: if the start value is greater than or equal to the end, return null
+  * find the pivot idx given the subsection of the array defined by start and end indicies
+  * call helper recursivesly on the subarray left of the pivot
+  * call helper recursively on the subarry right of the pivot
+
+
+### Quick-Sort (not in place) 
+#### Whiteboard:
 [image](./assets/quick-sort.JPG)
 
 ## Radix Sort
