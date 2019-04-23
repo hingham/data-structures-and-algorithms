@@ -28,12 +28,17 @@ function mergeSort(arr) {
     let mid = Math.ceil(arr.length / 2);
     let leftArr = arr.slice(0, mid);
     let rightArr = arr.slice(mid, arr.length);
-    return merge(mergeSort(leftArr), mergeSort(rightArr));
+    let leftSorted = mergeSort(leftArr);
+    let rightSorted = mergeSort(rightArr);
+    let resultsFromMerge = merge(leftSorted, rightSorted);
+    return bothSorted;
   }
 }
 
-let unsortedArr = [3, 4, 10, 7, 5, 11, 6];
+let unsortedArr = [4, 3, 10, 7, 5, 11, 6];
 
-mergeSort(unsortedArr);
+let sorted = mergeSort(unsortedArr);
+
+console.log(sorted);
 
 module.exports = { mergeSort };
